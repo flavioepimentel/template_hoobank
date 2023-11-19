@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "Pier";
+    src: url("src/fonts/pierrefont85948/pier.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Ikaros";
+    src: url("src/fonts/Ikaros/Ikaros.ttf");
+}
+
+
+
+#section_about {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+#container_about {
+    margin-bottom: 25px;
+    text-decoration: solid;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo_black_white {
+    text-align: center;
+    z-index: -1;
+    /* background-image: url("../src/images/logo-black-white.svg");
+    background-repeat: repeat-y;
+    background-position: center bottom; */
+
+}
+
+
+#process_container {
+    background-image: url("https://images.pexels.com/photos/13646959/pexels-photo-13646959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    color: white;
+    background-attachment: fixed;
+    background-size: 100%;
+    text-shadow: 1px 1px black;
+    border-top: 2px solid #f4c430;
+    border-bottom: 3px solid #e2b586;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#process_image {
+    max-width: 100%;
+    height: 100%;
+}
+
+#text_about {
+    margin: auto;
+    margin: 30px;
+    font-family: "Open Sans", sans-serif;
+    color: #242424;
+}
+
+#text_metodology {
+    display: flex;
+    align-content: end;
+    align-items: center;
+    text-align: center;
+
+}
+
+#h1_who_we_are {
+    z-index: -100;
+}
+
+.section_resons_why {
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+
+}
+
+.div_why_sindpro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img_why_sindpro {
+    height: 150px;
+    border-bottom: 1px solid #e2b586;
+}
+
+.p_answer_why {
+    text-align: center;
+    max-width: 200px;
+}
+
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    .carousel-item {
+        height: 180px;
+    }
+
+    #div_container_brand_carousel,
+    #carouselExampleAutoplaying,
+    .carousel-inner,
+    #carousel_section {
+        height: 182px;
+    }
+
+    .div_process_image {
+        height: 100%;
+        margin-left: -150px;
+    }
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    #process_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .div_process_image {
+        height: 100%;
+        margin-left: -200px;
+    }
+
+    #process_image {
+        width: 200%;
+    }
+
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
