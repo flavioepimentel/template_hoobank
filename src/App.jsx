@@ -1,33 +1,18 @@
-import styles from "./style";
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout/Layout";
+import Home from "./pages/Home/Home";
+import NoPage from "./pages/NoPage/NoPage";
 
-const App = () => (
-  <div className="bg-primary w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar />
-      </div>
-    </div>
 
-    <div className={`bg-primary ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Hero />
-      </div>
-    </div>
-    
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Stats />
-        <Business />
-        <Billing />
-        <CardDeal />
-        <Testimonials />
-        <Clients />
-        <CTA />
-        <Footer />
-      </div>
-    </div>
-  </div>
-);
-
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/sciclop_website" element={<Layout />}>
+          <Route exact index element={<Home />} />
+          <Route exact path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
